@@ -7,44 +7,47 @@ __human_name__ = 'strings'
 
 #Part 1 
 #1 who scored?
-goalscorer0 = "Ruud Gullit"
-goalscorer1 = "Marco van Basten"
-print(goalscorer0, goalscorer1)
+player_0 = "Ruud Gullit"
+player_1 = "Marco van Basten"
+print (player_0, player_1)
+
 #2 What minute?
-goal_time0 = 32
-goal_time1 =  54
-print(goal_time0, goal_time1)
+goal_0 = 32
+goal_1 = 54
+print (goal_0, goal_1)
 
 #3 Scorers 
 # using + operator create string
 # <scorer_name> <when_they_scored>, <scorer_name> <when_they_scored>
-scorers = (f"{goalscorer0} {goal_time0}, {goalscorer1} {goal_time1}")
+scorers = (f"{player_0} {goal_0}, {player_1} {goal_1}")
+report = f"{player_0} scored in the {goal_0}nd minute\n{player_1} scored in {goal_1}th minute"
+print(report)
 
 #4 use f strings to create single string who scored when..
-scorers = (f"{goalscorer0} {goal_time0} {goalscorer1} {goal_time1}")
-report = (f"{goalscorer0} scored in the {goal_time0}nd minute\{goalscorer1} scored in {goal_time1}th minute")
-print(report)
+
+
 
 #Part 2
 #1
 player = 'Ruud Gullit'
 #2
-first_name = player[:player.find('')]
+first_name = player[:player.find(' '):]
 #3
-last_name = player[:player.find('')]
+last_name = player[:player.find(' '):]
 
 first_name_len = len(first_name)
 last_name_len = len(last_name)
 #4
-name_short = (player[0] + '.' + last_name)
+name_short = (player[0] + '. ' + last_name)
 print (name_short)
 
 #5 
-chant = first_name + 'Ruud '
-chant = chant *3
+yell = first_name + '! '
+chant = yell *(first_name_len)
 chant = chant.rstrip(chant[-1])
-print (chant)
+print(chant)
 
-
+good_chant = (chant[-1] != ' ')
+print (good_chant)
 
 
